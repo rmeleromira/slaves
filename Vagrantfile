@@ -14,7 +14,6 @@ Vagrant.configure("2") do |config|
     slave1.vm.provider :libvirt do |lv|
       lv.memory = "2048"
       lv.cpus = "4"
-      lv.graphics_ip = "192.168.1.96"
     end
     slave1.vm.provision "ansible" do |ansible|
       ansible.ask_vault_pass = true
@@ -34,7 +33,6 @@ Vagrant.configure("2") do |config|
     slave2.vm.provider :libvirt do |lv|
       lv.memory = "2048"
       lv.cpus = "4"
-      lv.graphics_ip = "192.168.1.96"
     end
     slave2.vm.provision "ansible" do |ansible|
       ansible.ask_vault_pass = true
@@ -54,7 +52,6 @@ Vagrant.configure("2") do |config|
     slave3.vm.provider :libvirt do |lv|
       lv.memory = "2048"
       lv.cpus = "4"
-      lv.graphics_ip = "192.168.1.96"
     end
     slave3.vm.provision "ansible" do |ansible|
       ansible.ask_vault_pass = true
@@ -74,7 +71,6 @@ Vagrant.configure("2") do |config|
     slave4.vm.provider :libvirt do |lv|
       lv.memory = "2048"
       lv.cpus = "4"
-      lv.graphics_ip = "192.168.1.96"
     end
     slave4.vm.provision "ansible" do |ansible|
       ansible.ask_vault_pass = true
@@ -94,7 +90,6 @@ Vagrant.configure("2") do |config|
     slave5.vm.provider :libvirt do |lv|
       lv.memory = "2048"
       lv.cpus = "4"
-      lv.graphics_ip = "192.168.1.96"
     end
     slave5.vm.provision "ansible" do |ansible|
       ansible.ask_vault_pass = true
