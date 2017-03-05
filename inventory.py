@@ -38,7 +38,7 @@ class LibvirtInventory(object):
         for domainid in self.domains:
             domain = self.conn.lookupByID(domainid)
             name = domain.name()
-            if 'tower' in name:
+            if 'slave' not in name:
                 continue
             ip = domain.interfaceAddresses(libvirt.VIR_DOMAIN_INTERFACE_ADDRESSES_SRC_LEASE).popitem()[1]['addrs'][0]['addr']
             inventory['all']['hosts'].append(name)

@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
       lv.cpus = "4"
     end
     slave1.vm.provision "ansible" do |ansible|
-      ansible.ask_vault_pass = true
+      ansible.vault_password_file = "vault-pass"
       ansible.playbook = "provision.yml"
     end
   end
@@ -35,7 +35,7 @@ Vagrant.configure("2") do |config|
       lv.cpus = "4"
     end
     slave2.vm.provision "ansible" do |ansible|
-      ansible.ask_vault_pass = true
+      ansible.vault_password_file = "vault-pass"
       ansible.playbook = "provision.yml"
     end
   end
@@ -54,7 +54,7 @@ Vagrant.configure("2") do |config|
       lv.cpus = "4"
     end
     slave3.vm.provision "ansible" do |ansible|
-      ansible.ask_vault_pass = true
+      ansible.vault_password_file = "vault-pass"
       ansible.playbook = "provision.yml"
     end
   end
@@ -73,7 +73,7 @@ Vagrant.configure("2") do |config|
       lv.cpus = "4"
     end
     slave4.vm.provision "ansible" do |ansible|
-      ansible.ask_vault_pass = true
+      ansible.vault_password_file = "vault-pass"
       ansible.playbook = "provision.yml"
     end
   end
@@ -92,7 +92,7 @@ Vagrant.configure("2") do |config|
       lv.cpus = "4"
     end
     slave5.vm.provision "ansible" do |ansible|
-      ansible.ask_vault_pass = true
+      ansible.vault_password_file = "vault-pass"
       ansible.playbook = "provision.yml"
     end
   end
