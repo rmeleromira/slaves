@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+  become: true
+  gather_facts: true
+  tasks:
+    - include_vars: 
+        file: "vars/main.yml"
+    - name: Add keys
+      authorized_key:
+        user: vagrant
+        state: present
+        key: '{{ item }}'
+      with_items: '{{ public_keys }}'
+    - name: Add keys
+      authorized_key:
+        user: root
+        state: present
+        key: '{{ item }}'
+      with_items: '{{ public_keys }}'
